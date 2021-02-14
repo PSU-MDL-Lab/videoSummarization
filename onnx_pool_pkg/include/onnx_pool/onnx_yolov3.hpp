@@ -6,12 +6,12 @@
 namespace onnx_yolov3_pkg
 {
 
-class OnnxYolov3
+class OnnxYOLOV3
 {
 public:
-  OnnxYolov3();
+  OnnxYOLOV3();
 
-  virtual ~OnnxYolov3();
+  virtual ~OnnxYOLOV3();
 };
 
 }  // namespace onnx_yolov3_pkg
