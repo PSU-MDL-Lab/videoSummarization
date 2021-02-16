@@ -58,4 +58,6 @@ sudo apt install --no-install-recommends -y \
 
 
 # ---------------------- RNN DEMO -----------------------------------------------------
+source /opt/ros/foxy/setup.bash
+cd videoSummarization/env_setup.bash
 # ---------------------- RNN DEMO -----------------------------------------------------

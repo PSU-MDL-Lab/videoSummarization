@@ -14,8 +14,13 @@ OnnxOrch::OnnxOrch(
 {
     // Create the subscriptions
     sub = this->create_subscription<std_msgs::msg::UInt64> (
-        "ONNX_JOB_TOPIC", queueSize, [](std_msgs::msg::UInt64::UniquePtr msg) {
-    uint64_t cls_ptr = reinterpret_cast<std::uintptr_t>(msg.data())
+        "LOCAL_STREAM_TOPIC", queueSize, [](std_msgs::msg::UInt64::UniquePtr msg) {
+    uint64_t randVal = reinterpret_cast<std::uintptr_t>(msg.data())       
+    onnx_job = new OnnxJob();
+    onnx_job->value = randVal;
+    msg->data = (uint64_t)&onnx_job;
+    
+    
     onnx_job = reinterpret_cast<onnx_pool::OnnxJob>(cls_ptr)
     printf("Received onnx_job with value: %d at address" PRIXPTR "\n", onnx_job->value, cls_ptr);
     });

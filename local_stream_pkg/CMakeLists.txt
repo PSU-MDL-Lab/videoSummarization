@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(injest_pkg)
+project(local_stream_pkg)
 
 
 # Default to C99
@@ -27,26 +27,23 @@ find_package(rcutils REQUIRED)
 find_package(std_msgs REQUIRED)
 
 
-add_executable(injest src/injest.cpp)
+add_library(local_stream_pkg SHARED src/local_stream.cpp)
 target_include_directories(
-    injest PUBLIC
+    local_stream_pkg PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../local_stream_pkg/include>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../include>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../onnx_pool_pkg/include>
     $<INSTALL_INTERFACE:include>
 )
-target_link_libraries(injest
-    -L${CMAKE_CURRENT_SOURCE_DIR}/../local_stream_pkg/build/local_stream_pkg/
-    -llocal_stream_pkg
-)
-ament_target_dependencies( 
-    injest
-    "class_loader"
+ament_target_dependencies(local_stream_pkg
     "rclcpp"
     "rclcpp_components"
+    "rcutils"
+    "std_msgs"
 )
 
 
-install(TARGETS injest DESTINATION lib/${PROJECT_NAME})
+install(TARGETS local_stream_pkg DESTINATION lib/${PROJECT_NAME})
 
 
 if(BUILD_TESTING)

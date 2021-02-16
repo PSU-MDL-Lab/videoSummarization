@@ -7,7 +7,7 @@ namespace onnx_pool
 
 OnnxJob::OnnxJob()
 {
-    value = rand();
+
 }
 
 

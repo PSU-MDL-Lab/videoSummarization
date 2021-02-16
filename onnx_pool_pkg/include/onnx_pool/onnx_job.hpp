@@ -2,10 +2,6 @@
 #define ONNX_POOL__ONNX_JOB_HPP_
 
 
-#include <stdlib.h>
-#include <time.h> 
-
-
 namespace onnx_pool
 {
 

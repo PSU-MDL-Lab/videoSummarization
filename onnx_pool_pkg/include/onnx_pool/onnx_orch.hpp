@@ -25,8 +25,8 @@ class OnnxOrch : public rclcpp::Node
         
         
         OnnxJob* onnx_job
-        rclcpp::Publisher<std_msgs::msg::UInt64>::SharedPtr pub;
-        rclcpp::Subscription<std_msgs::msg::UInt64>::SharedPtr sub;
+        rclcpp::Publisher<std_msgs::msg::UInt64>::SharedPtr* pub;
+        rclcpp::Subscription<std_msgs::msg::UInt64>::SharedPtr* sub;
 };
 
 
