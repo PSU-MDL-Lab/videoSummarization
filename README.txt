@@ -59,5 +59,6 @@ sudo apt install --no-install-recommends -y \
 
 # ---------------------- RNN DEMO -----------------------------------------------------
 source /opt/ros/foxy/setup.bash
-cd videoSummarization/env_setup.bash
+source videoSummarization/env_setup.bash
+ros2 run injest_pkg injest
 # ---------------------- RNN DEMO -----------------------------------------------------

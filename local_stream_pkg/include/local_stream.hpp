@@ -26,7 +26,7 @@ class LocalStream : public rclcpp::Node
         void on_timer();
 
 
-        rclcpp::Publisher<std_msgs::msg::UInt64>::SharedPtr* pub;
+        rclcpp::Publisher<std_msgs::msg::UInt64>::SharedPtr* m_pub;
         rclcpp::TimerBase::SharedPtr timer;
         int m_numPub;
 };

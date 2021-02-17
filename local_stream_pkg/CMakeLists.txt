@@ -21,8 +21,8 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(ament_cmake_ros REQUIRED)                                         
 find_package(rclcpp REQUIRED)
-find_package(rclcpp_components REQUIRED)
 find_package(rcutils REQUIRED)
 find_package(std_msgs REQUIRED)
 
@@ -37,7 +37,6 @@ target_include_directories(
 )
 ament_target_dependencies(local_stream_pkg
     "rclcpp"
-    "rclcpp_components"
     "rcutils"
     "std_msgs"
 )

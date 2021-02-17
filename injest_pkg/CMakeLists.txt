@@ -32,10 +32,14 @@ target_include_directories(
     injest PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../local_stream_pkg/include>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../onnx_pool_pkg/include>
     $<INSTALL_INTERFACE:include>
 )
 target_link_libraries(injest
     -L${CMAKE_CURRENT_SOURCE_DIR}/../local_stream_pkg/build/local_stream_pkg/
+    -L${CMAKE_CURRENT_SOURCE_DIR}/../onnx_pool_pkg/build/onnx_pool/
+    -lonnx_orch
+    -lonnx_job 
     -llocal_stream_pkg
 )
 ament_target_dependencies( 

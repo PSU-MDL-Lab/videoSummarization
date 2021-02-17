@@ -10,7 +10,7 @@ class OnnxJob
 {
     public:
         OnnxJob();
-        ~OnnxOrch();
+        ~OnnxJob();
         int value;
 };
 
