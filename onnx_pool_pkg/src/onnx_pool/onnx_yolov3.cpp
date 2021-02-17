@@ -5,10 +5,7 @@ using std::placeholders::_1;
 
 // TODO (izo5011): Figure out how to remove this definition
 onnx_pool::OnnxYOLOv3::OnnxYOLOv3(const rclcpp::NodeOptions& options)
-    : rclcpp::Node("name", rclcpp::NodeOptions().use_intra_process_comms(true))
-{
-
-}
+    : rclcpp::Node("", rclcpp::NodeOptions().use_intra_process_comms(true))  { }
 
 
 onnx_pool::OnnxYOLOv3::OnnxYOLOv3 (
@@ -40,9 +37,8 @@ onnx_pool::OnnxYOLOv3::OnnxYOLOv3 (
 
 void onnx_pool::OnnxYOLOv3::onRecv(const typename std_msgs::msg::UInt64::UniquePtr msg)
 {
-    RCLCPP_INFO(this->get_logger(), "Received: '%llu'", msg->data);
     OnnxJob* onnx_job = reinterpret_cast<OnnxJob*>(msg->data);
-    RCLCPP_INFO(this->get_logger(), "Recvd onnx_job with value: %d", onnx_job->value);
+    RCLCPP_INFO(this->get_logger(), "Recvd onnx_job with value: %d at address 0x%" PRIXPTR, onnx_job->value, msg->data);
 }
 
 

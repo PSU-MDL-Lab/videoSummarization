@@ -25,7 +25,7 @@ void LocalStream::on_timer()
     // Create Message
     auto msg = std::make_unique<std_msgs::msg::UInt64>();
     msg->data = (uint64_t)rand();
-    RCLCPP_INFO(this->get_logger(), "Publishing: '%llu'", msg->data);
+    RCLCPP_INFO(this->get_logger(), "Publishing: %llu", msg->data);
     std::flush(std::cout);
     // Put the message into a queue to be processed by the middleware.
     // This call is non-blocking.

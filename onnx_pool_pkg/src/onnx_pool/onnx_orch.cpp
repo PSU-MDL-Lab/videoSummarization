@@ -5,10 +5,7 @@ using std::placeholders::_1;
 
 // TODO (izo5011): Figure out how to remove this definition
 onnx_pool::OnnxOrch::OnnxOrch(const rclcpp::NodeOptions& options)
-    : rclcpp::Node("name", rclcpp::NodeOptions().use_intra_process_comms(true))
-{
-
-}
+    : rclcpp::Node("", rclcpp::NodeOptions().use_intra_process_comms(true)) { }
 
 
 onnx_pool::OnnxOrch::OnnxOrch (
@@ -39,16 +36,16 @@ onnx_pool::OnnxOrch::OnnxOrch (
 
 
 void onnx_pool::OnnxOrch::onRecv(const typename std_msgs::msg::UInt64::UniquePtr msg)
-{
-    RCLCPP_INFO(this->get_logger(), "Received: '%llu'", msg->data);       
+{   
     uint64_t randVal = msg->data;
     // Create Message
     OnnxJob* onnx_job = new OnnxJob();
     onnx_job->value = randVal;
     auto pubMsg = std::make_unique<std_msgs::msg::UInt64>();
     pubMsg->data = (uint64_t)onnx_job;
-    // Send Message    
-    RCLCPP_INFO(this->get_logger(), "Sent onnx_job with value: %d at address 0x%" PRIXPTR "\n", onnx_job->value, pubMsg->data);
+    // Send Message
+    RCLCPP_INFO(this->get_logger(), "Sent onnx_job with value: %d at address 0x%" PRIXPTR, onnx_job->value, pubMsg->data);
+    m_pub[0]->publish(std::move(pubMsg));
 }
 
 
