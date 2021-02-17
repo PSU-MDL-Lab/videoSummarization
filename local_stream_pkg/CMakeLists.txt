@@ -31,8 +31,6 @@ add_library(local_stream_pkg SHARED src/local_stream.cpp)
 target_include_directories(
     local_stream_pkg PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../include>
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../onnx_pool_pkg/include>
     $<INSTALL_INTERFACE:include>
 )
 ament_target_dependencies(local_stream_pkg

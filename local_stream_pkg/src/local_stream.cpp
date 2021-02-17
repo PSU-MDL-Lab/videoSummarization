@@ -4,14 +4,17 @@ using namespace std::chrono_literals;
 
 LocalStream::LocalStream(
     const std::string& name,
-    const int queueSize,
+    const int pubQueSz,
     const std::vector<std::string>& pubVec)
 : rclcpp::Node(name, rclcpp::NodeOptions().use_intra_process_comms(true))
 {
-    // Create publisher
     m_numPub = pubVec.size();
+    // Create Publishers
     m_pub = new rclcpp::Publisher<std_msgs::msg::UInt64>::SharedPtr[m_numPub];
-    m_pub[0] = this->create_publisher<std_msgs::msg::UInt64>("LOCAL_STREAM_TOPIC", queueSize);  
+    for(int i = 0; i < m_numPub; i++)
+    {
+        m_pub[i] = this->create_publisher<std_msgs::msg::UInt64>(pubVec[i], pubQueSz);
+    }
     // Use a timer to schedule periodic message publishing.
     timer = create_wall_timer(1s, std::bind(&LocalStream::on_timer, this));
 }

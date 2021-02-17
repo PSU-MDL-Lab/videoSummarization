@@ -1,7 +1,9 @@
 #include "onnx_pool/onnx_orch.hpp"
 using namespace std::chrono_literals;
+using std::placeholders::_1;
 
 
+// TODO (izo5011): Figure out how to remove this definition
 onnx_pool::OnnxOrch::OnnxOrch(const rclcpp::NodeOptions& options)
     : rclcpp::Node("name", rclcpp::NodeOptions().use_intra_process_comms(true))
 {
@@ -10,36 +12,43 @@ onnx_pool::OnnxOrch::OnnxOrch(const rclcpp::NodeOptions& options)
 
 
 onnx_pool::OnnxOrch::OnnxOrch (
-    const std::string& name, 
-    const int queueSize, 
-    const std::vector<std::string>& pubVec, 
-    const std::vector<std::string>& subVec)
+    const std::string& name,
+    const int subQueSz,    
+    const int pubQueSz,
+    const std::vector<std::string>& subVec,
+    const std::vector<std::string>& pubVec)
 : rclcpp::Node(name, rclcpp::NodeOptions().use_intra_process_comms(true))
 {
-    m_numPub = pubVec.size();
     m_numSub = subVec.size();
-    // Create Publishers
-    m_pub = new rclcpp::Publisher<std_msgs::msg::UInt64>::SharedPtr[m_numPub];
-    m_pub[0] = this->create_publisher<std_msgs::msg::UInt64>("ONNX_JOB_TOPIC", queueSize);
-    // Create callback
-    auto callback =
-    [this](const typename std_msgs::msg::UInt64::UniquePtr msg) -> void
-    {
-        RCLCPP_INFO(this->get_logger(), "Received: '%llu'", msg->data);       
-        uint64_t randVal = msg->data;
-        // Create Message
-        OnnxJob* onnx_job = new OnnxJob();
-        onnx_job->value = randVal;
-        auto pubMsg = std::make_unique<std_msgs::msg::UInt64>();
-        pubMsg->data = (uint64_t)onnx_job;
-        // Send Message    
-        RCLCPP_INFO(this->get_logger(), "Sent onnx_job with value: %d at address 0x%" PRIXPTR "\n", onnx_job->value, pubMsg->data);
-    };
+    m_numPub = pubVec.size();
     // Create the subscriptions
     m_sub = new rclcpp::Subscription<std_msgs::msg::UInt64>::SharedPtr[m_numSub];
-    m_sub[0] = this->create_subscription<std_msgs::msg::UInt64>(
-        "LOCAL_STREAM_TOPIC", queueSize, callback
-    ); 
+    for(int i = 0; i < m_numSub; i++)
+    {
+        m_sub[i] = this->create_subscription<std_msgs::msg::UInt64>(
+            subVec[i], subQueSz, std::bind(&onnx_pool::OnnxOrch::onRecv, this, _1)
+        );
+    }    
+    // Create Publishers
+    m_pub = new rclcpp::Publisher<std_msgs::msg::UInt64>::SharedPtr[m_numPub];
+    for(int i = 0; i < m_numPub; i++)
+    {
+        m_pub[i] = this->create_publisher<std_msgs::msg::UInt64>(pubVec[i], pubQueSz);
+    }
+}
+
+
+void onnx_pool::OnnxOrch::onRecv(const typename std_msgs::msg::UInt64::UniquePtr msg)
+{
+    RCLCPP_INFO(this->get_logger(), "Received: '%llu'", msg->data);       
+    uint64_t randVal = msg->data;
+    // Create Message
+    OnnxJob* onnx_job = new OnnxJob();
+    onnx_job->value = randVal;
+    auto pubMsg = std::make_unique<std_msgs::msg::UInt64>();
+    pubMsg->data = (uint64_t)onnx_job;
+    // Send Message    
+    RCLCPP_INFO(this->get_logger(), "Sent onnx_job with value: %d at address 0x%" PRIXPTR "\n", onnx_job->value, pubMsg->data);
 }
 
 

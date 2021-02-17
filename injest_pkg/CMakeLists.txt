@@ -38,8 +38,9 @@ target_include_directories(
 target_link_libraries(injest
     -L${CMAKE_CURRENT_SOURCE_DIR}/../local_stream_pkg/build/local_stream_pkg/
     -L${CMAKE_CURRENT_SOURCE_DIR}/../onnx_pool_pkg/build/onnx_pool/
+    -lonnx_yolov3
     -lonnx_orch
-    -lonnx_job 
+    -lonnx_job
     -llocal_stream_pkg
 )
 ament_target_dependencies( 

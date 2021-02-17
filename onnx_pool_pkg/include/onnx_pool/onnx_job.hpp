@@ -18,4 +18,4 @@ class OnnxJob
 }  // namespace onnx_pool
 
 
-#endif  // ONNX_POOL__ONNX_ORCH_COMPONENT_HPP_
+#endif  // ONNX_POOL__ONNX_JOB_HPP_

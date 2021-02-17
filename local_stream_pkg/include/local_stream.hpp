@@ -16,16 +16,15 @@
 class LocalStream : public rclcpp::Node
 {
     public:
+        // Constructor
         LocalStream(
             const std::string& name,
-            const int queueSize,
+            const int pubQueSz,
             const std::vector<std::string>& pubVec
-        );
-        
-
+        );       
+        // Member functions
         void on_timer();
-
-
+        // Attributes
         rclcpp::Publisher<std_msgs::msg::UInt64>::SharedPtr* m_pub;
         rclcpp::TimerBase::SharedPtr timer;
         int m_numPub;

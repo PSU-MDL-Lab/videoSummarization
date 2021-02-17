@@ -1,6 +1,7 @@
 #ifndef ONNX_POOL__ONNX_ORCH_COMPONENT_HPP_
 #define ONNX_POOL__ONNX_ORCH_COMPONENT_HPP_
 
+
 #include <chrono>
 #include <cinttypes>
 #include <cstdio>
@@ -20,19 +21,23 @@ namespace onnx_pool
     {
         public:
             // Constructors
+            // TODO (izo5011): Figure out how to remove this constructor and its definition
             OnnxOrch(const rclcpp::NodeOptions& options);      
             ONNX_POOL_PUBLIC
-            explicit OnnxOrch(
-                const std::string& name, 
-                const int queueSize, 
-                const std::vector<std::string>& pubVec, 
-                const std::vector<std::string>& subVec
+            OnnxOrch(
+                const std::string& name,
+                const int subQueSz,
+                const int pubQueSz,
+                const std::vector<std::string>& subVec,             
+                const std::vector<std::string>& pubVec 
             );
-            // Members
-            rclcpp::Publisher<std_msgs::msg::UInt64>::SharedPtr* m_pub;
-            rclcpp::Subscription<std_msgs::msg::UInt64>::SharedPtr* m_sub;
-            int m_numPub;
+            // Member functions
+            void onRecv(const typename std_msgs::msg::UInt64::UniquePtr msg);
+            // Attributes
             int m_numSub;
+            int m_numPub;
+            rclcpp::Subscription<std_msgs::msg::UInt64>::SharedPtr* m_sub;
+            rclcpp::Publisher<std_msgs::msg::UInt64>::SharedPtr* m_pub;
     };
 }  // namespace onnx_pool
 
