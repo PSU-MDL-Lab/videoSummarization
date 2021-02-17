@@ -1,2 +1,0 @@
-compute_pool::OnnxOrch;lib/libcompute_orch.so
-compute_pool::OnnxYOLOv3;lib/libonnx_yolov3.so

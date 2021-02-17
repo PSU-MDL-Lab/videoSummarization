@@ -1,3 +1,0 @@
-source;share/compute_pool/environment/ament_prefix_path.sh
-source;share/compute_pool/environment/library_path.sh
-source;share/compute_pool/environment/path.sh

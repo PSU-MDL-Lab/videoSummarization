@@ -4,9 +4,9 @@ local_stream_pkg/log
 net_stream_pkg/build
 net_stream_pkg/install
 net_stream_pkg/log
-onnx_pool_pkg/build
-onnx_pool_pkg/install
-onnx_pool_pkg/log
+compute_pool_pkg/build
+compute_pool_pkg/install
+compute_pool_pkg/log
 query_pkg/build
 query_pkg/install
 query_pkg/log
