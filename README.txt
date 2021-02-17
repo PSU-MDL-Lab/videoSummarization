@@ -18,15 +18,15 @@ sudo sh -c 'echo "deb [arch=$(dpkg --print-architecture)] http://packages.ros.or
 
 
 # ---------------------- INSTALL ROS2 PACKAGES -----------------------------------------
-sudo apt install ros-dashing-desktop
-sudo apt install ros-dashing-ros-base
+sudo apt install ros-foxy-desktop
+sudo apt install ros-foxy-ros-base
 # ---------------------- INSTALL DEVELOPMENT TOOLS AND ROS TOOLS ----------------------
 
 
 
 
 # ---------------------- RNN DEMO -----------------------------------------------------
-source /opt/ros/dashing/setup.bash
+source /opt/ros/foxy/setup.bash
 source videoSummarization/build_and_env_setup.bash
 ros2 run injest_pkg injest
 # ---------------------- RNN DEMO -----------------------------------------------------
