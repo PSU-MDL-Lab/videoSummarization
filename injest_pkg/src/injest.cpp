@@ -3,8 +3,8 @@
 #include <chrono>
 #include "rclcpp/rclcpp.hpp"
 #include "local_stream.hpp"
-#include "onnx_pool/onnx_orch.hpp"
-#include "onnx_pool/onnx_yolov3.hpp"
+#include "compute_pool/compute_orch.hpp"
+#include "compute_pool/onnx_yolov3.hpp"
 using namespace std::chrono_literals;
 
 
@@ -23,8 +23,8 @@ int main(int argc, char** argv)
     rclcpp::executors::SingleThreadedExecutor exec;
     rclcpp::NodeOptions options;
     std::vector<std::string> local_stream_pV;
-    std::vector<std::string> onnx_orch_sV;   
-    std::vector<std::string> onnx_orch_pV;
+    std::vector<std::string> compute_orch_sV;   
+    std::vector<std::string> compute_orch_pV;
     std::vector<std::string> onnx_yolov3_sV;    
     std::vector<std::string> onnx_yolov3_pV;
 
@@ -36,18 +36,18 @@ int main(int argc, char** argv)
         10,
         local_stream_pV
     );
-    onnx_orch_sV.push_back("LOCAL_STREAM_TOPIC");   
-    onnx_orch_pV.push_back("ONNX_JOB_TOPIC");
-    auto onnx_orch = std::make_shared<onnx_pool::OnnxOrch>(
-        "Onnx_Orch", 
+    compute_orch_sV.push_back("LOCAL_STREAM_TOPIC");   
+    compute_orch_pV.push_back("COMPUTE_JOB_TOPIC");
+    auto compute_orch = std::make_shared<compute_pool::ComputeOrch>(
+        "Compute_Orch", 
         10,
         10,
-        onnx_orch_sV,    
-        onnx_orch_pV
+        compute_orch_sV,    
+        compute_orch_pV
     );
-    onnx_yolov3_sV.push_back("ONNX_JOB_TOPIC");   
-    onnx_yolov3_pV.push_back("ONNX_POOL_OUT");
-    auto onnx_yolov3_0 = std::make_shared<onnx_pool::OnnxYOLOv3>(
+    onnx_yolov3_sV.push_back("COMPUTE_JOB_TOPIC");   
+    onnx_yolov3_pV.push_back("COMPUTE_POOL_OUT");
+    auto onnx_yolov3_0 = std::make_shared<compute_pool::OnnxYOLOv3>(
         "Onnx_YOLOV3_0", 
         10,
         10,
@@ -61,7 +61,7 @@ int main(int argc, char** argv)
 
     // Add nodes to the executor which provide work for the executor during its "spin" function.
     exec.add_node(local_stream); 
-    exec.add_node(onnx_orch);
+    exec.add_node(compute_orch);
     exec.add_node(onnx_yolov3_0);
 
     // spin will block until work comes in, execute work as it becomes available, and keep blocking.

@@ -1,0 +1,11 @@
+source;share/compute_pool/hook/cmake_prefix_path.ps1
+source;share/compute_pool/hook/cmake_prefix_path.dsv
+source;share/compute_pool/hook/cmake_prefix_path.sh
+source;share/compute_pool/hook/ld_library_path_lib.ps1
+source;share/compute_pool/hook/ld_library_path_lib.dsv
+source;share/compute_pool/hook/ld_library_path_lib.sh
+source;share/compute_pool/local_setup.bash
+source;share/compute_pool/local_setup.dsv
+source;share/compute_pool/local_setup.ps1
+source;share/compute_pool/local_setup.sh
+source;share/compute_pool/local_setup.zsh

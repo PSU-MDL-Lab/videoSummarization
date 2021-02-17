@@ -1,9 +1,9 @@
-injest_pkg/build
-injest_pkg/install
-injest_pkg/log
 local_stream_pkg/build
 local_stream_pkg/install
 local_stream_pkg/log
+net_stream_pkg/build
+net_stream_pkg/install
+net_stream_pkg/log
 onnx_pool_pkg/build
 onnx_pool_pkg/install
 onnx_pool_pkg/log
@@ -13,3 +13,6 @@ query_pkg/log
 storage_pkg/build
 storage_pkg/install
 storage_pkg/log
+injest_pkg/build
+injest_pkg/install
+injest_pkg/log

@@ -1,0 +1,353 @@
+[0.000000] (-) TimerEvent: {}
+[0.000203] (compute_pool) JobQueued: {'identifier': 'compute_pool', 'dependencies': OrderedDict()}
+[0.000260] (compute_pool) JobStarted: {'identifier': 'compute_pool'}
+[0.016426] (compute_pool) JobProgress: {'identifier': 'compute_pool', 'progress': 'cmake'}
+[0.016544] (compute_pool) Command: {'cmd': ['/usr/bin/cmake', '/home/ikenna/videoSummarization/compute_pool_pkg', '-DCMAKE_BUILD_TYPE=RelWithDebInfo', '-DCMAKE_INSTALL_PREFIX=/home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool'], 'cwd': '/home/ikenna/videoSummarization/compute_pool_pkg/build/compute_pool', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ikenna'), ('SSH_CLIENT', '192.168.85.1 57359 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:./local_stream_pkg/install/local_stream_pkg/lib/local_stream_pkg/:./net_stream_pkg/install/net_stream_pkg/lib/net_stream_pkg/:./compute_pool_pkg/install/compute_pool_pkg/lib/compute_pool_pkg/:./local_stream_pkg/install/local_stream_pkg/lib/local_stream_pkg/:./net_stream_pkg/install/net_stream_pkg/lib/net_stream_pkg/:./compute_pool_pkg/install/compute_pool_pkg/lib/compute_pool_pkg/'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/ikenna'), ('OLDPWD', '/home/ikenna/videoSummarization'), ('SSH_TTY', '/dev/pts/8'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/ikenna/videoSummarization/net_stream_pkg/install:/home/ikenna/videoSummarization/local_stream_pkg/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ikenna'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '105'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ikenna/.local/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:13.0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/ikenna/videoSummarization/net_stream_pkg/install/net_stream_pkg:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/ikenna/videoSummarization/compute_pool_pkg/build/compute_pool'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.85.1 57359 192.168.85.129 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ikenna/videoSummarization/net_stream_pkg/install/net_stream_pkg:/opt/ros/foxy')]), 'shell': False}
+[0.083572] (compute_pool) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.3.0\n'}
+[0.099210] (-) TimerEvent: {}
+[0.139618] (compute_pool) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.3.0\n'}
+[0.143857] (compute_pool) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.200154] (-) TimerEvent: {}
+[0.227032] (compute_pool) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.227816] (compute_pool) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.301151] (-) TimerEvent: {}
+[0.305509] (compute_pool) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.316248] (compute_pool) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.316571] (compute_pool) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.318744] (compute_pool) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.402183] (-) TimerEvent: {}
+[0.411063] (compute_pool) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.412042] (compute_pool) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.502541] (-) TimerEvent: {}
+[0.505503] (compute_pool) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.516878] (compute_pool) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.517143] (compute_pool) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.519435] (compute_pool) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.8 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.544773] (compute_pool) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.5", minimum required is "3") \n'}
+[0.544978] (compute_pool) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.602768] (-) TimerEvent: {}
+[0.703836] (-) TimerEvent: {}
+[0.736486] (compute_pool) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.0 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[0.742807] (compute_pool) StdoutLine: {'line': b'-- Found rclcpp: 2.3.0 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[0.787667] (compute_pool) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.795998] (compute_pool) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.2.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.804810] (-) TimerEvent: {}
+[0.896973] (compute_pool) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[0.905852] (-) TimerEvent: {}
+[0.930799] (compute_pool) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[1.006794] (-) TimerEvent: {}
+[1.014080] (compute_pool) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.076428] (compute_pool) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.2 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[1.077783] (compute_pool) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.078760] (compute_pool) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.107879] (-) TimerEvent: {}
+[1.161388] (compute_pool) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.161938] (compute_pool) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.208733] (-) TimerEvent: {}
+[1.247814] (compute_pool) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[1.248202] (compute_pool) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[1.309380] (-) TimerEvent: {}
+[1.324277] (compute_pool) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[1.324787] (compute_pool) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[1.409249] (compute_pool) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[1.409417] (-) TimerEvent: {}
+[1.410424] (compute_pool) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.510375] (-) TimerEvent: {}
+[1.598859] (compute_pool) StdoutLine: {'line': b'-- Found rclcpp_components: 2.3.0 (/opt/ros/foxy/share/rclcpp_components/cmake)\n'}
+[1.611358] (-) TimerEvent: {}
+[1.660789] (compute_pool) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[1.712393] (-) TimerEvent: {}
+[1.752331] (compute_pool) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.756370] (compute_pool) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.756717] (compute_pool) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/ikenna/videoSummarization/compute_pool_pkg/include;$<BUILD_INTERFACE:/home/ikenna/videoSummarization/compute_pool_pkg/include>\n'}
+[1.756833] (compute_pool) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.760195] (compute_pool) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[1.760329] (compute_pool) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[1.761983] (compute_pool) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.765931] (compute_pool) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.766114] (compute_pool) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.766781] (compute_pool) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.771425] (compute_pool) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.787770] (compute_pool) StdoutLine: {'line': b'-- Generating done\n'}
+[1.789916] (compute_pool) StdoutLine: {'line': b'-- Build files have been written to: /home/ikenna/videoSummarization/compute_pool_pkg/build/compute_pool\n'}
+[1.799291] (compute_pool) CommandEnded: {'returncode': 0}
+[1.799756] (compute_pool) JobProgress: {'identifier': 'compute_pool', 'progress': 'build'}
+[1.802980] (compute_pool) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ikenna/videoSummarization/compute_pool_pkg/build/compute_pool', '--', '-j12', '-l12'], 'cwd': '/home/ikenna/videoSummarization/compute_pool_pkg/build/compute_pool', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ikenna'), ('SSH_CLIENT', '192.168.85.1 57359 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:./local_stream_pkg/install/local_stream_pkg/lib/local_stream_pkg/:./net_stream_pkg/install/net_stream_pkg/lib/net_stream_pkg/:./compute_pool_pkg/install/compute_pool_pkg/lib/compute_pool_pkg/:./local_stream_pkg/install/local_stream_pkg/lib/local_stream_pkg/:./net_stream_pkg/install/net_stream_pkg/lib/net_stream_pkg/:./compute_pool_pkg/install/compute_pool_pkg/lib/compute_pool_pkg/'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/ikenna'), ('OLDPWD', '/home/ikenna/videoSummarization'), ('SSH_TTY', '/dev/pts/8'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/ikenna/videoSummarization/net_stream_pkg/install:/home/ikenna/videoSummarization/local_stream_pkg/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ikenna'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '105'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ikenna/.local/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:13.0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/ikenna/videoSummarization/net_stream_pkg/install/net_stream_pkg:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/ikenna/videoSummarization/compute_pool_pkg/build/compute_pool'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.85.1 57359 192.168.85.129 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ikenna/videoSummarization/net_stream_pkg/install/net_stream_pkg:/opt/ros/foxy')]), 'shell': False}
+[1.813315] (-) TimerEvent: {}
+[1.851793] (compute_pool) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target onnx_yolov3\x1b[0m\n'}
+[1.891542] (compute_pool) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/onnx_yolov3.dir/src/compute_pool/onnx_yolov3.cpp.o\x1b[0m\n'}
+[1.914355] (-) TimerEvent: {}
+[2.015395] (-) TimerEvent: {}
+[2.116330] (-) TimerEvent: {}
+[2.217627] (-) TimerEvent: {}
+[2.318480] (-) TimerEvent: {}
+[2.419476] (-) TimerEvent: {}
+[2.520439] (-) TimerEvent: {}
+[2.621037] (-) TimerEvent: {}
+[2.722006] (-) TimerEvent: {}
+[2.823026] (-) TimerEvent: {}
+[2.924021] (-) TimerEvent: {}
+[3.025021] (-) TimerEvent: {}
+[3.126011] (-) TimerEvent: {}
+[3.227012] (-) TimerEvent: {}
+[3.328012] (-) TimerEvent: {}
+[3.429006] (-) TimerEvent: {}
+[3.476493] (compute_pool) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ikenna/videoSummarization/compute_pool_pkg/src/compute_pool/onnx_yolov3.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[Kcompute_pool::OnnxYOLOv3::OnnxYOLOv3(const rclcpp::NodeOptions&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.476691] (compute_pool) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ikenna/videoSummarization/compute_pool_pkg/src/compute_pool/onnx_yolov3.cpp:7:65:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Koptions\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[3.476750] (compute_pool) StderrLine: {'line': b'    7 | compute_pool::OnnxYOLOv3::OnnxYOLOv3(\x1b[01;35m\x1b[Kconst rclcpp::NodeOptions& options\x1b[m\x1b[K)\n'}
+[3.476801] (compute_pool) StderrLine: {'line': b'      |                                      \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~\x1b[m\x1b[K\n'}
+[3.529259] (-) TimerEvent: {}
+[3.630426] (-) TimerEvent: {}
+[3.731382] (-) TimerEvent: {}
+[3.832317] (-) TimerEvent: {}
+[3.933389] (-) TimerEvent: {}
+[4.034374] (-) TimerEvent: {}
+[4.135361] (-) TimerEvent: {}
+[4.236398] (-) TimerEvent: {}
+[4.337404] (-) TimerEvent: {}
+[4.438335] (-) TimerEvent: {}
+[4.539326] (-) TimerEvent: {}
+[4.640411] (-) TimerEvent: {}
+[4.741337] (-) TimerEvent: {}
+[4.842384] (-) TimerEvent: {}
+[4.943398] (-) TimerEvent: {}
+[5.043981] (-) TimerEvent: {}
+[5.144990] (-) TimerEvent: {}
+[5.246151] (-) TimerEvent: {}
+[5.347232] (-) TimerEvent: {}
+[5.448412] (-) TimerEvent: {}
+[5.549537] (-) TimerEvent: {}
+[5.650715] (-) TimerEvent: {}
+[5.751733] (-) TimerEvent: {}
+[5.852359] (-) TimerEvent: {}
+[5.953331] (-) TimerEvent: {}
+[6.054287] (-) TimerEvent: {}
+[6.155341] (-) TimerEvent: {}
+[6.256020] (-) TimerEvent: {}
+[6.357212] (-) TimerEvent: {}
+[6.457642] (-) TimerEvent: {}
+[6.558260] (-) TimerEvent: {}
+[6.659257] (-) TimerEvent: {}
+[6.760241] (-) TimerEvent: {}
+[6.861279] (-) TimerEvent: {}
+[6.962280] (-) TimerEvent: {}
+[7.063252] (-) TimerEvent: {}
+[7.164281] (-) TimerEvent: {}
+[7.265311] (-) TimerEvent: {}
+[7.366285] (-) TimerEvent: {}
+[7.467277] (-) TimerEvent: {}
+[7.568336] (-) TimerEvent: {}
+[7.669278] (-) TimerEvent: {}
+[7.770271] (-) TimerEvent: {}
+[7.871422] (-) TimerEvent: {}
+[7.972314] (-) TimerEvent: {}
+[8.073309] (-) TimerEvent: {}
+[8.174317] (-) TimerEvent: {}
+[8.275284] (-) TimerEvent: {}
+[8.376329] (-) TimerEvent: {}
+[8.477293] (-) TimerEvent: {}
+[8.578267] (-) TimerEvent: {}
+[8.679268] (-) TimerEvent: {}
+[8.780294] (-) TimerEvent: {}
+[8.881278] (-) TimerEvent: {}
+[8.982320] (-) TimerEvent: {}
+[9.083315] (-) TimerEvent: {}
+[9.184592] (-) TimerEvent: {}
+[9.285393] (-) TimerEvent: {}
+[9.386362] (-) TimerEvent: {}
+[9.487389] (-) TimerEvent: {}
+[9.588360] (-) TimerEvent: {}
+[9.689379] (-) TimerEvent: {}
+[9.790397] (-) TimerEvent: {}
+[9.891378] (-) TimerEvent: {}
+[9.992357] (-) TimerEvent: {}
+[10.093376] (-) TimerEvent: {}
+[10.194391] (-) TimerEvent: {}
+[10.295341] (-) TimerEvent: {}
+[10.396035] (-) TimerEvent: {}
+[10.497247] (-) TimerEvent: {}
+[10.597941] (-) TimerEvent: {}
+[10.698980] (-) TimerEvent: {}
+[10.799963] (-) TimerEvent: {}
+[10.900979] (-) TimerEvent: {}
+[11.001959] (-) TimerEvent: {}
+[11.102976] (-) TimerEvent: {}
+[11.204011] (-) TimerEvent: {}
+[11.304995] (-) TimerEvent: {}
+[11.405962] (-) TimerEvent: {}
+[11.506992] (-) TimerEvent: {}
+[11.607309] (-) TimerEvent: {}
+[11.707885] (-) TimerEvent: {}
+[11.808998] (-) TimerEvent: {}
+[11.909895] (-) TimerEvent: {}
+[12.010864] (-) TimerEvent: {}
+[12.111924] (-) TimerEvent: {}
+[12.212927] (-) TimerEvent: {}
+[12.313967] (-) TimerEvent: {}
+[12.414894] (-) TimerEvent: {}
+[12.515950] (-) TimerEvent: {}
+[12.594224] (compute_pool) StdoutLine: {'line': b'[ 33%] \x1b[32m\x1b[1mLinking CXX shared library libonnx_yolov3.so\x1b[0m\n'}
+[12.616977] (-) TimerEvent: {}
+[12.717956] (-) TimerEvent: {}
+[12.786590] (compute_pool) StdoutLine: {'line': b'[ 33%] Built target onnx_yolov3\n'}
+[12.798788] (compute_pool) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target compute_job\x1b[0m\n'}
+[12.811443] (compute_pool) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/compute_job.dir/src/compute_pool/compute_job.cpp.o\x1b[0m\n'}
+[12.819047] (-) TimerEvent: {}
+[12.840368] (compute_pool) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX shared library libcompute_job.so\x1b[0m\n'}
+[12.882691] (compute_pool) StdoutLine: {'line': b'[ 66%] Built target compute_job\n'}
+[12.895305] (compute_pool) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target compute_orch\x1b[0m\n'}
+[12.919889] (-) TimerEvent: {}
+[12.929056] (compute_pool) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/compute_orch.dir/src/compute_pool/compute_orch.cpp.o\x1b[0m\n'}
+[13.021016] (-) TimerEvent: {}
+[13.122067] (-) TimerEvent: {}
+[13.223018] (-) TimerEvent: {}
+[13.323969] (-) TimerEvent: {}
+[13.425039] (-) TimerEvent: {}
+[13.526002] (-) TimerEvent: {}
+[13.626987] (-) TimerEvent: {}
+[13.727965] (-) TimerEvent: {}
+[13.828980] (-) TimerEvent: {}
+[13.929983] (-) TimerEvent: {}
+[14.030966] (-) TimerEvent: {}
+[14.132047] (-) TimerEvent: {}
+[14.233002] (-) TimerEvent: {}
+[14.333983] (-) TimerEvent: {}
+[14.355412] (compute_pool) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ikenna/videoSummarization/compute_pool_pkg/src/compute_pool/compute_orch.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[Kcompute_pool::ComputeOrch::ComputeOrch(const rclcpp::NodeOptions&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[14.355598] (compute_pool) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ikenna/videoSummarization/compute_pool_pkg/src/compute_pool/compute_orch.cpp:7:67:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Koptions\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[14.355660] (compute_pool) StderrLine: {'line': b'    7 | compute_pool::ComputeOrch::ComputeOrch(\x1b[01;35m\x1b[Kconst rclcpp::NodeOptions& options\x1b[m\x1b[K)\n'}
+[14.355714] (compute_pool) StderrLine: {'line': b'      |                                        \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~\x1b[m\x1b[K\n'}
+[14.435236] (-) TimerEvent: {}
+[14.536103] (-) TimerEvent: {}
+[14.637078] (-) TimerEvent: {}
+[14.738054] (-) TimerEvent: {}
+[14.839138] (-) TimerEvent: {}
+[14.940027] (-) TimerEvent: {}
+[15.041022] (-) TimerEvent: {}
+[15.142048] (-) TimerEvent: {}
+[15.243081] (-) TimerEvent: {}
+[15.344019] (-) TimerEvent: {}
+[15.445024] (-) TimerEvent: {}
+[15.546068] (-) TimerEvent: {}
+[15.647040] (-) TimerEvent: {}
+[15.748023] (-) TimerEvent: {}
+[15.849196] (-) TimerEvent: {}
+[15.950203] (-) TimerEvent: {}
+[16.051274] (-) TimerEvent: {}
+[16.152251] (-) TimerEvent: {}
+[16.253269] (-) TimerEvent: {}
+[16.354302] (-) TimerEvent: {}
+[16.455271] (-) TimerEvent: {}
+[16.556258] (-) TimerEvent: {}
+[16.657333] (-) TimerEvent: {}
+[16.758318] (-) TimerEvent: {}
+[16.859274] (-) TimerEvent: {}
+[16.960292] (-) TimerEvent: {}
+[17.061237] (-) TimerEvent: {}
+[17.162022] (-) TimerEvent: {}
+[17.263164] (-) TimerEvent: {}
+[17.363580] (-) TimerEvent: {}
+[17.464056] (-) TimerEvent: {}
+[17.565220] (-) TimerEvent: {}
+[17.665908] (-) TimerEvent: {}
+[17.766878] (-) TimerEvent: {}
+[17.867947] (-) TimerEvent: {}
+[17.968473] (-) TimerEvent: {}
+[18.069443] (-) TimerEvent: {}
+[18.170483] (-) TimerEvent: {}
+[18.271507] (-) TimerEvent: {}
+[18.372481] (-) TimerEvent: {}
+[18.473530] (-) TimerEvent: {}
+[18.574610] (-) TimerEvent: {}
+[18.675646] (-) TimerEvent: {}
+[18.776594] (-) TimerEvent: {}
+[18.877607] (-) TimerEvent: {}
+[18.978603] (-) TimerEvent: {}
+[19.079631] (-) TimerEvent: {}
+[19.180582] (-) TimerEvent: {}
+[19.281642] (-) TimerEvent: {}
+[19.382595] (-) TimerEvent: {}
+[19.483619] (-) TimerEvent: {}
+[19.584609] (-) TimerEvent: {}
+[19.685591] (-) TimerEvent: {}
+[19.786586] (-) TimerEvent: {}
+[19.887143] (-) TimerEvent: {}
+[19.988303] (-) TimerEvent: {}
+[20.089627] (-) TimerEvent: {}
+[20.190602] (-) TimerEvent: {}
+[20.291621] (-) TimerEvent: {}
+[20.391950] (-) TimerEvent: {}
+[20.492996] (-) TimerEvent: {}
+[20.593985] (-) TimerEvent: {}
+[20.694976] (-) TimerEvent: {}
+[20.795971] (-) TimerEvent: {}
+[20.896991] (-) TimerEvent: {}
+[20.997979] (-) TimerEvent: {}
+[21.098974] (-) TimerEvent: {}
+[21.200005] (-) TimerEvent: {}
+[21.300494] (-) TimerEvent: {}
+[21.401584] (-) TimerEvent: {}
+[21.502561] (-) TimerEvent: {}
+[21.603572] (-) TimerEvent: {}
+[21.704606] (-) TimerEvent: {}
+[21.805573] (-) TimerEvent: {}
+[21.906692] (-) TimerEvent: {}
+[22.007541] (-) TimerEvent: {}
+[22.108546] (-) TimerEvent: {}
+[22.209560] (-) TimerEvent: {}
+[22.310489] (-) TimerEvent: {}
+[22.411541] (-) TimerEvent: {}
+[22.512664] (-) TimerEvent: {}
+[22.613662] (-) TimerEvent: {}
+[22.714650] (-) TimerEvent: {}
+[22.815622] (-) TimerEvent: {}
+[22.916698] (-) TimerEvent: {}
+[23.017650] (-) TimerEvent: {}
+[23.118592] (-) TimerEvent: {}
+[23.219623] (-) TimerEvent: {}
+[23.320619] (-) TimerEvent: {}
+[23.326836] (compute_pool) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libcompute_orch.so\x1b[0m\n'}
+[23.421687] (-) TimerEvent: {}
+[23.503334] (compute_pool) StdoutLine: {'line': b'[100%] Built target compute_orch\n'}
+[23.518888] (compute_pool) CommandEnded: {'returncode': 0}
+[23.522593] (-) TimerEvent: {}
+[23.561029] (compute_pool) JobProgress: {'identifier': 'compute_pool', 'progress': 'install'}
+[23.578838] (compute_pool) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ikenna/videoSummarization/compute_pool_pkg/build/compute_pool'], 'cwd': '/home/ikenna/videoSummarization/compute_pool_pkg/build/compute_pool', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ikenna'), ('SSH_CLIENT', '192.168.85.1 57359 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:./local_stream_pkg/install/local_stream_pkg/lib/local_stream_pkg/:./net_stream_pkg/install/net_stream_pkg/lib/net_stream_pkg/:./compute_pool_pkg/install/compute_pool_pkg/lib/compute_pool_pkg/:./local_stream_pkg/install/local_stream_pkg/lib/local_stream_pkg/:./net_stream_pkg/install/net_stream_pkg/lib/net_stream_pkg/:./compute_pool_pkg/install/compute_pool_pkg/lib/compute_pool_pkg/'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/ikenna'), ('OLDPWD', '/home/ikenna/videoSummarization'), ('SSH_TTY', '/dev/pts/8'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/ikenna/videoSummarization/net_stream_pkg/install:/home/ikenna/videoSummarization/local_stream_pkg/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ikenna'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '105'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ikenna/.local/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:13.0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/ikenna/videoSummarization/net_stream_pkg/install/net_stream_pkg:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/ikenna/videoSummarization/compute_pool_pkg/build/compute_pool'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.85.1 57359 192.168.85.129 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ikenna/videoSummarization/net_stream_pkg/install/net_stream_pkg:/opt/ros/foxy')]), 'shell': False}
+[23.588780] (compute_pool) StdoutLine: {'line': b'-- Install configuration: "RelWithDebInfo"\n'}
+[23.589125] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/include\n'}
+[23.589231] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/include/compute_pool\n'}
+[23.589393] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/include/compute_pool/compute_job.hpp\n'}
+[23.589501] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/include/compute_pool/compute_orch.hpp\n'}
+[23.589744] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/include/compute_pool/onnx_yolov3.hpp\n'}
+[23.589823] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/include/compute_pool/visibility_control.h\n'}
+[23.589937] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/lib/libcompute_job.so\n'}
+[23.590005] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/lib/libcompute_orch.so\n'}
+[23.596642] (compute_pool) StdoutLine: {'line': b'-- Set runtime path of "/home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/lib/libcompute_orch.so" to ""\n'}
+[23.596813] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/lib/libonnx_yolov3.so\n'}
+[23.603244] (compute_pool) StdoutLine: {'line': b'-- Set runtime path of "/home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/lib/libonnx_yolov3.so" to ""\n'}
+[23.603484] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/share/compute_pool/environment/library_path.sh\n'}
+[23.603759] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/share/compute_pool/environment/library_path.dsv\n'}
+[23.603852] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/share/ament_index/resource_index/package_run_dependencies/compute_pool\n'}
+[23.603948] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/share/ament_index/resource_index/parent_prefix_path/compute_pool\n'}
+[23.604198] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/share/compute_pool/environment/ament_prefix_path.sh\n'}
+[23.604291] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/share/compute_pool/environment/ament_prefix_path.dsv\n'}
+[23.604391] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/share/compute_pool/environment/path.sh\n'}
+[23.604500] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/share/compute_pool/environment/path.dsv\n'}
+[23.604872] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/share/compute_pool/local_setup.bash\n'}
+[23.604957] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/share/compute_pool/local_setup.sh\n'}
+[23.605053] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/share/compute_pool/local_setup.zsh\n'}
+[23.605171] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/share/compute_pool/local_setup.dsv\n'}
+[23.605649] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/share/compute_pool/package.dsv\n'}
+[23.605729] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/share/ament_index/resource_index/packages/compute_pool\n'}
+[23.605796] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/share/ament_index/resource_index/rclcpp_components/compute_pool\n'}
+[23.605853] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/share/compute_pool/cmake/export_compute_poolExport.cmake\n'}
+[23.605913] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/share/compute_pool/cmake/export_compute_poolExport-relwithdebinfo.cmake\n'}
+[23.606276] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/share/compute_pool/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[23.606422] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/share/compute_pool/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[23.606549] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/share/compute_pool/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[23.606644] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/share/compute_pool/cmake/compute_poolConfig.cmake\n'}
+[23.606737] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/share/compute_pool/cmake/compute_poolConfig-version.cmake\n'}
+[23.606984] (compute_pool) StdoutLine: {'line': b'-- Installing: /home/ikenna/videoSummarization/compute_pool_pkg/install/compute_pool/share/compute_pool/package.xml\n'}
+[23.609262] (compute_pool) CommandEnded: {'returncode': 0}
+[23.624574] (-) TimerEvent: {}
+[23.676494] (compute_pool) JobEnded: {'identifier': 'compute_pool', 'rc': 0}
+[23.677291] (-) EventReactorShutdown: {}
